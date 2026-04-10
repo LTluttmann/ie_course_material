@@ -1,0 +1,84 @@
+[project]
+name = "ie-course"
+version = "0.1.0"
+description = "Information Extraction in Python — Course Materials"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+
+dependencies = [
+    # NLP core
+    "spacy>=3.7",
+    "nltk>=3.8",
+    "transformers>=4.40",
+    "datasets>=2.19",
+    "tokenizers>=0.19",
+
+    # Regex & rule-based extraction
+    "regex>=2024.4",
+    "flashtext>=2.7",
+
+    # OCR & Computer Vision
+    "easyocr>=1.7",
+    "opencv-python>=4.9.0",
+
+    # ML / Deep Learning
+    "torch>=2.2",
+    "scikit-learn>=1.4",
+    "numpy>=1.26",
+    "pandas>=2.2",
+
+    # Structured output & parsing
+    "pydantic>=2.7",
+    "lxml>=5.2",
+    "beautifulsoup4>=4.12",
+    "pypdf>=4.2",
+    "python-docx>=1.1",
+
+    # LLM-based extraction
+    "openai>=1.25",
+    "anthropic>=0.25",
+    "instructor>=1.2",
+
+    # Evaluation
+    "seqeval>=1.2",
+    "evaluate>=0.4",
+
+    # Notebooks & visualization
+    "jupyter>=1.0",
+    "ipywidgets>=8.1",
+    "matplotlib>=3.8",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",
+    "mypy>=1.9",
+    "pre-commit>=3.7",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev-dependencies = [
+    "pytest>=8.1",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",
+    "mypy>=1.9",
+    "pre-commit>=3.7",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=src/ie_course --cov-report=term-missing"
