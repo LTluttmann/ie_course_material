@@ -12,6 +12,7 @@ dependencies = [
     "transformers>=4.40",
     "datasets>=2.19",
     "tokenizers>=0.19",
+    "flair",
 
     # Regex & rule-based extraction
     "regex>=2024.4",
@@ -49,7 +50,7 @@ dependencies = [
     "ipywidgets>=8.1",
     "matplotlib>=3.8",
     "rich>=13.7",
-
+    
     # spacy models
     "en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.8.0/en_core_web_md-3.8.0-py3-none-any.whl",
     "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl",
